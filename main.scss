@@ -252,3 +252,22 @@ input[type="number"]::-webkit-outer-spin-button {
 .campo-container.numberp {
     margin-top: 30px;
 }
+
+.footer {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: center;
+    flex: 1;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 10px;
+
+    a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+  }
