@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -39,25 +39,51 @@
 
     <div class="card">
 
-      Bill
+      <div class="bill">
 
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
+        <div class="campo-container">
+          <label for="moneybill" class="legenda">Bill</label> <br>
+          <img src="./images/icon-dollar.svg" alt="Icon Dollar" class="cifrao">
+          <input type="number" id="moneybill" name="number" class="campo" placeholder="0">
+        </div>
 
-      Number of People
+        <div class="seltip">
+          <p>Select Tip %</p>
+          <div class="seltipb">
+            <button class="percbutton">5%</button>
+            <button class="percbutton">10%</button>
+            <button class="percbutton">15%</button>
+            <button class="percbutton">25%</button>
+            <button class="percbutton">50%</button>
+            <button class="percbutton">Custom</button>
+          </div>
+        </div>
 
-      Tip Amount
-      / person
+        <div class="campo-container numberp">
+          <label for="numberpeople" class="legenda">Number of People</label> <br>
+          <img src="./images/icon-person.svg" alt="Icon Person" class="iconp">
+          <input type="number" id="numberpeople" name="number" class="campo" placeholder="0">
+        </div>
 
-      Total
-      / person
+      </div>
 
-      Reset
+      <div class="total">
+
+        <div class="LtipA">Tip Amount <br>
+          <p>/ person</p>
+        </div>
+
+        <div class="RtipA">$0.00</div>
+
+        <div class="Ltotal">Total
+          <p>/ person</p>
+        </div>
+
+        <div class="Rtotal">$0.00</div>
+
+        <button class="rebutton">RESET
+        </button>
+      </div>
 
     </div>
 

@@ -1,12 +1,13 @@
 // Color Variables
 
 $cardTotalColor: hsl(183, 100%, 15%);
-$color1: hsl(186, 14%, 43%);
+$fontBcolor: hsl(186, 14%, 43%);
 $color2: hsl(184, 14%, 56%);
 $backColor: hsl(185, 41%, 84%);
-$color3: hsl(189, 41%, 97%);
+$smallFColor: hsl(189, 41%, 97%);
 $backCalcColor: hsl(0, 0%, 100%);
-$cyan: rgb(38,195,174);
+$cyan: rgb(38, 195, 174);
+$fontSizeInputs: 24px;
 
 // Font Variables
 
@@ -25,12 +26,12 @@ body {
     width: 100%;
     height: 100vh;
     background-color: $backColor;
+    font-family: $mainFont;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    font-family: $mainFont;
     height: 100%;
     align-items: center;
 
@@ -39,6 +40,215 @@ body {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 40%;
+        height: 35%;
     }
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    min-width: 500px;
+    background-color: $backCalcColor;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.3);
+    height: auto;
+
+    .total {
+        display: grid;
+        grid-template: [row1-start] "legTip RespTip" auto [row1-end] [row2-start] "legTotal RespTotal" auto [row2-end] [row3-start] "reset reset" auto [row3-end] / auto auto;
+        background-color: $cardTotalColor;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+.bill,
+.total {
+    flex: 1;
+}
+
+.LtipA {
+    grid-area: legTip;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    color: $backCalcColor;
+    min-width: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    align-self: center;
+}
+
+.RtipA {
+    grid-area: RespTip;
+    justify-self: center;
+    align-self: center;
+    color: $cyan;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.Ltotal {
+    grid-area: legTotal;
+    padding-right: 30px;
+    color: $backCalcColor;
+    min-width: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    align-self: center;
+}
+
+.Rtotal {
+    grid-area: RespTotal;
+    justify-self: center;
+    align-self: center;
+    color: $cyan;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.total p {
+    color: $smallFColor;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.campo {
+    text-align: right;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: $smallFColor;
+    padding: 5px 5px 5px 30px;
+    font-family: $mainFont;
+    color: $cardTotalColor;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+::placeholder {
+    color: $cardTotalColor;
+    opacity: 0.5;
+}
+
+.campo-container {
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+.cifrao {
+    position: absolute;
+    left: 10px;
+    top: 75%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+    width: -50%;
+}
+
+.legenda {
+    color: $fontBcolor;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.rebutton {
+    grid-area: reset;
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+    align-items: start;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    background-color: $cyan;
+    font-family: $mainFont;
+    border-radius: 3px;
+    height: 20%;
+    border: none;
+    font-size: 15px;
+    color: $cardTotalColor;
+    padding: 15.5px;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    font-weight: bold;
+
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 10px 10px;
+    width: 100%;
+}
+
+.seltipb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.percbutton {
+    color: $backCalcColor;
+    background-color: $cardTotalColor;
+    padding: 5px;
+    width: 80px;
+    margin: 0;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-family: $mainFont;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:last-child {
+        background-color: $smallFColor;
+        color: $cardTotalColor;
+        opacity: 0.8;
+    }
+}
+
+.percbutton:hover:not(:last-child) {
+    background-color: $cyan;
+    color: $cardTotalColor;
+}
+
+.seltip p {
+    color: $fontBcolor;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.iconp {
+    position: absolute;
+    left: 10px;
+    top: 75%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+    width: -50%;
+}
+
+.campo-container.numberp {
+    margin-top: 30px;
 }
