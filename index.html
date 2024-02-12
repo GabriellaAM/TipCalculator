@@ -33,17 +33,19 @@
         <div class="campo-container">
           <label for="moneybill" class="legenda">Bill</label> <br>
           <img src="./images/icon-dollar.svg" alt="Icon Dollar" class="cifrao">
-          <input type="number" id="moneybill" name="number" class="campo" placeholder="0">
+          <input type="text" id="moneybill" name="text" class="campo" placeholder="0">
         </div>
+
+        <div id="error-message" style="color: red;"></div>
 
         <div class="seltip">
           <p>Select Tip %</p>
           <div class="seltipb">
-            <button class="percbutton">5%</button>
-            <button class="percbutton">10%</button>
-            <button class="percbutton">15%</button>
-            <button class="percbutton">25%</button>
-            <button class="percbutton">50%</button>
+            <button class="percbutton" data-valor="5">5%</button>
+            <button class="percbutton" data-valor="10">10%</button>
+            <button class="percbutton" data-valor="15">15%</button>
+            <button class="percbutton" data-valor="25">25%</button>
+            <button class="percbutton" data-valor="50">50%</button>
             <input type="number" id="numbercustom" name="number" class="percbutton" placeholder="Custom">
           </div>
         </div>
@@ -62,15 +64,15 @@
           <p>/ person</p>
         </div>
 
-        <div class="RtipA">$0.00</div>
+        <div class="RtipA" id="tipAmoun">$0.00</div>
 
         <div class="Ltotal">Total
           <p>/ person</p>
         </div>
 
-        <div class="Rtotal">$0.00</div>
+        <div class="Rtotal" id="totalPerson">$0.00</div>
 
-        <button class="rebutton">RESET
+        <button class="rebutton" id="reset">RESET
         </button>
       </div>
 
@@ -86,6 +88,8 @@
     </div>
 
   </div>
+
+  <script src="script.js"></script>
 
 </body>
 

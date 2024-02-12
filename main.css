@@ -226,6 +226,11 @@ input[type=number]::-webkit-outer-spin-button {
   outline: none;
 }
 
+.percbutton.active:not(:last-child) {
+  background-color: rgb(38, 195, 174);
+  color: hsl(183, 100%, 15%);
+}
+
 .percbutton::-moz-placeholder {
   text-align: center;
   opacity: 0.6;
