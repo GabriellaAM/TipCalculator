@@ -9,6 +9,7 @@ const errorMessageDiv = document.getElementById('error-message');
 
 percBotao.forEach(percbutton => {
     percbutton.addEventListener('click', () => {
+        
         const isActive = percbutton.classList.contains('active');
 
         percBotao.forEach(percbutton => {
@@ -33,6 +34,10 @@ resetbotao.addEventListener('click', function () {
     numberOfPeople.value = '';
     tipAmount.textContent = '$0.00';
     totalPers.textContent = '$0.00';
+
+    percBotao.forEach(percbutton => {
+        percbutton.classList.remove('active');
+    });
 });
 
 percBotao.forEach(percbutton => percbutton.addEventListener('click', (event) => selectedpercbutton(event)));
