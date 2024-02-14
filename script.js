@@ -53,8 +53,6 @@ function calculTip() {
         valorTip = Number(selectedButton.dataset.percentage) / 100;
     } else if (inputCustom.value !== '' && !selectedButton) {
         valorTip = Number(inputCustom.value) / 100;
-
-        console.log("lido")
     }
 
     if ((valorTip || valorTip === 0) && valorBill && valorNumberofpeople) {
