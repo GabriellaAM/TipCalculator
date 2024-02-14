@@ -5,7 +5,8 @@ let numberOfPeople = document.getElementById('numberpeople');
 const tipAmount = document.getElementById('tipAmoun');
 const totalPers = document.getElementById('totalPerson');
 const resetbotao = document.getElementById('reset');
-const errorMessageDiv = document.getElementById('error-message');
+const errorMessageDivBill = document.querySelector('.error-message.bill');
+const errorMessageDivPeople = document.querySelector('.error-message.people');
 
 // Botões Porcentagem Classe "Active"
 
@@ -66,18 +67,6 @@ function calculTip() {
     }
 }
 
-inputmoneyBill.addEventListener('blur', (event) => {
-    calculTip();
-});
-
-numberOfPeople.addEventListener('blur', (event) => {
-    calculTip();
-});
-
-inputCustom.addEventListener('focus',removepercbutton);
-
-inputCustom.addEventListener('blur', calculTip);
-
 // Botão Reset
 
 resetbotao.addEventListener('click', function () {
@@ -91,6 +80,54 @@ resetbotao.addEventListener('click', function () {
         percbutton.classList.remove('active');
     });
 });
+
+// Mensagem de Erro
+
+function errormessage(inputField) {
+    const valor = parseFloat(inputField.value);
+
+    let campoBorda = document.querySelectorAll('.campo');
+
+    if (inputField === inputmoneyBill) {
+        campoBorda = document.querySelectorAll('.campo')[0];
+    } else if (inputField === numberOfPeople) {
+        campoBorda = document.querySelectorAll('.campo')[1];
+    }
+
+    if(inputField === inputmoneyBill) {
+        if(valor == 0 || isNaN(valor)) {
+            errorMessageDivBill.style.display = "block";
+            campoBorda.classList.add('active');
+        } else {
+            errorMessageDivBill.style.display = "none";
+            campoBorda.classList.remove('active')
+        }
+    } else if(inputField === numberOfPeople) {
+        if(valor == 0 || isNaN(valor)) {
+            errorMessageDivPeople.style.display = "block";
+            campoBorda.classList.add('active');
+        } else {
+            errorMessageDivPeople.style.display = "none";
+            campoBorda.classList.remove('active')
+        }
+    }
+};
+
+// Eventos
+
+inputmoneyBill.addEventListener('blur', (event) => {
+    calculTip();
+    errormessage(event.target);
+});
+
+numberOfPeople.addEventListener('blur', (event) => {
+    calculTip();
+    errormessage(event.target);
+});
+
+inputCustom.addEventListener('focus', removepercbutton);
+
+inputCustom.addEventListener('blur', calculTip);
 
 
 
