@@ -47,7 +47,7 @@ body {
   padding: 20px;
   width: 100%;
 }
-@media (max-width: 452px) {
+@media (max-width: 530px) {
   .card {
     flex-direction: column;
     min-width: 100%;

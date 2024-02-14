@@ -11,28 +11,28 @@ const errorMessageDivPeople = document.querySelector('.error-message.people');
 // Botões Porcentagem Classe "Active"
 
 function selectpercBotao(event) {
-        
-        let previousSelectedButton = document.querySelector('.percbutton.active');
-        
-        if (previousSelectedButton){
-            previousSelectedButton.classList.remove('active');
+
+    let previousSelectedButton = document.querySelector('.percbutton.active');
+
+    if (previousSelectedButton) {
+        previousSelectedButton.classList.remove('active');
 
         event.target.classList.add('active');
-        
-        } else {
 
-            event.target.classList.add('active');
-        }
+    } else {
 
-        inputCustom.value = '';
+        event.target.classList.add('active');
+    }
 
-        calculTip();
+    inputCustom.value = '';
+
+    calculTip();
 }
 
 function removepercbutton() {
     let selectedButton = document.querySelector('.percbutton.active');
 
-    if(selectedButton) {
+    if (selectedButton) {
         selectedButton.classList.remove('active')
     }
 }
@@ -49,19 +49,19 @@ function calculTip() {
     const valorNumberofpeople = parseFloat(numberOfPeople.value);
     let valorTip = null;
 
-    if(inputCustom.value === '' && selectedButton) {
+    if (inputCustom.value === '' && selectedButton) {
         valorTip = Number(selectedButton.dataset.percentage) / 100;
-    } else if(inputCustom.value !== '' && !selectedButton) {
+    } else if (inputCustom.value !== '' && !selectedButton) {
         valorTip = Number(inputCustom.value) / 100;
 
         console.log("lido")
     }
 
-    if  ((valorTip || valorTip === 0) && valorBill && valorNumberofpeople) {
+    if ((valorTip || valorTip === 0) && valorBill && valorNumberofpeople) {
         const TotalTip = (valorBill * valorTip);
         const Total = (valorBill + TotalTip);
 
-        tipAmount.textContent =  "$" + (TotalTip / valorNumberofpeople).toFixed(2);
+        tipAmount.textContent = "$" + (TotalTip / valorNumberofpeople).toFixed(2);
 
         totalPers.textContent = "$" + (Total / valorNumberofpeople).toFixed(2);
     }
@@ -94,16 +94,16 @@ function errormessage(inputField) {
         campoBorda = document.querySelectorAll('.campo')[1];
     }
 
-    if(inputField === inputmoneyBill) {
-        if(valor == 0 || isNaN(valor)) {
+    if (inputField === inputmoneyBill) {
+        if (valor == 0 || isNaN(valor)) {
             errorMessageDivBill.style.display = "block";
             campoBorda.classList.add('active');
         } else {
             errorMessageDivBill.style.display = "none";
             campoBorda.classList.remove('active')
         }
-    } else if(inputField === numberOfPeople) {
-        if(valor == 0 || isNaN(valor)) {
+    } else if (inputField === numberOfPeople) {
+        if (valor == 0 || isNaN(valor)) {
             errorMessageDivPeople.style.display = "block";
             campoBorda.classList.add('active');
         } else {
