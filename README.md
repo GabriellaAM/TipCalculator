@@ -27,7 +27,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- Solução URL: https://www.frontendmentor.io/solutions/faq-accordion-page-using-css-grid-and-flexbox-anfkVy3qn2
+- Solução URL: https://www.frontendmentor.io/solutions/responsive-tip-calculator-puxbRN0CPl
 
 - Live Site URL: https://gabriellaam.github.io/TipCalculator/
 
