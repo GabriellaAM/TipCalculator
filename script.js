@@ -4,7 +4,7 @@ let inputCustom = document.getElementById('numbercustom');
 let numberOfPeople = document.getElementById('numberpeople');
 const tipAmount = document.getElementById('tipAmoun');
 const totalPers = document.getElementById('totalPerson');
-const resetbotao = document.getElementById('reset');
+const resetbotao = document.querySelector('.rebutton');
 const errorMessageDivBill = document.querySelector('.error-message.bill');
 const errorMessageDivPeople = document.querySelector('.error-message.people');
 
@@ -15,6 +15,7 @@ function selectpercBotao(event) {
     let previousSelectedButton = document.querySelector('.percbutton.active');
 
     if (previousSelectedButton) {
+
         previousSelectedButton.classList.remove('active');
 
         event.target.classList.add('active');
@@ -33,7 +34,9 @@ function removepercbutton() {
     let selectedButton = document.querySelector('.percbutton.active');
 
     if (selectedButton) {
-        selectedButton.classList.remove('active')
+
+        selectedButton.classList.remove('active');
+        
     }
 }
 
@@ -45,6 +48,8 @@ function calculTip() {
 
     let selectedButton = document.querySelector('.percbutton.active');
 
+    resetbotao.classList.remove('active');
+
     const valorBill = parseFloat(inputmoneyBill.value.replace(',', '.'));
     const valorNumberofpeople = parseFloat(numberOfPeople.value);
     let valorTip = null;
@@ -53,6 +58,10 @@ function calculTip() {
         valorTip = Number(selectedButton.dataset.percentage) / 100;
     } else if (inputCustom.value !== '' && !selectedButton) {
         valorTip = Number(inputCustom.value) / 100;
+    }
+
+    if(valorBill || valorNumberofpeople || valorTip){
+        resetbotao.classList.add('active');
     }
 
     if ((valorTip || valorTip === 0) && valorBill && valorNumberofpeople) {
@@ -77,6 +86,8 @@ resetbotao.addEventListener('click', function () {
     percBotao.forEach(percbutton => {
         percbutton.classList.remove('active');
     });
+
+    resetbotao.classList.remove('active');
 });
 
 // Mensagem de Erro
