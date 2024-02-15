@@ -236,9 +236,11 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: right;
   cursor: auto;
   border: none;
+  border: 2px solid transparent;
 }
 .percbutton:last-child:focus {
   outline: none;
+  border: 2px solid rgb(38, 195, 174);
 }
 
 .percbutton.active:not(:last-child) {

@@ -268,10 +268,12 @@ input[type="number"]::-webkit-outer-spin-button {
         text-align: right;
         cursor: auto;
         border: none;
+        border: 2px solid transparent;
     }
 
     &:last-child:focus {
         outline: none;
+        border: 2px solid $cyan;
     }
 }
 
