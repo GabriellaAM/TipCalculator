@@ -17,7 +17,7 @@
 
 ## O desafio
 
-O desafio se baseia na criação de uma calculadora, na qual os usuários poderão utilizar uma funcionalidade que, após a inserção do valor da conta, número de pessoas a dividindo e taxa da gorjeta, realiza o cálculo do valor da gorjeta e total da conta por pessoa. 
+O desafio se baseia na criação de uma calculadora, na qual os usuários podem utilizar uma funcionalidade que, após a inserção do valor da conta, número de pessoas e taxa da gorjeta, realiza o cálculo do valor da gorjeta e total da conta por pessoa. 
 
 Os usuários devem ser capazes de:
 
