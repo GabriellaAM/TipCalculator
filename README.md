@@ -1,6 +1,6 @@
 # Frontend Mentor - Tip calculator app
 
-## Table of contents
+## Sumário
 
 - [Visão Geral](#visão-geral)
   - [O desafio](#o-desafio)
