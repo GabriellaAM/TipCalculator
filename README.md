@@ -46,7 +46,7 @@ Os usuários devem ser capazes de:
 
 ### O que eu aprendi?
 
-Notei que após o último desafio, meus conhecimentos em relação a CSS Grid e Flexbox evoluíram, pude completar a parte visual do site em apenas um dia. Aproveitei a oportunidade para colocar em prática um conceito que comecei a estudar recentemente: Sass. Mesmo sendo minha primeira vez o utlizando, facilitou muito o processo de construção do design, assim pude entender melhor como ele é estruturado e como posso trabalhar de maneira mais rápida o colocando em prática.
+Notei que após o último desafio, meus conhecimentos em relação à CSS Grid e Flexbox evoluíram, pude completar a parte visual do site em apenas um dia. Aproveitei a oportunidade para colocar em prática um conceito que comecei a estudar recentemente: Sass. Mesmo sendo minha primeira vez o utlizando, facilitou muito o processo de construção do design, assim pude entender melhor como ele é estruturado e como posso trabalhar de maneira mais rápida o colocando em prática.
 
 Ainda, foi possível evoluir minhas habilidades em relação a responsividade, entendi melhor as unidades de medida "rem" e "em", apesar de não as ter utilizado muito, estudei sobre elas durante o desenvolvimento do projeto, pois percebi que poderiam facilitar a construção de alguns elementos. Por fim, pratiquei JavaScript e notei uma melhora extremamente significativa no entendimento de sua lógica, além de compreender melhor alguns conceitos em relação a eventos e manipulação do DOM.
 
